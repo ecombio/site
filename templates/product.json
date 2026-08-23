@@ -38,11 +38,25 @@
         "custom_width": 100,
         "section_padding": 24
       }
+    },
+    "1787465165663500ac": {
+      "type": "apps",
+      "blocks": {
+        "upsell_com_ex_reconvert_bundle_TTK7ez": {
+          "type": "shopify://apps/upsell-com-ex-reconvert/blocks/bundle/72c64c30-2f7c-4a71-ae4c-efd1d5d1d2e2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "upsell_com_ex_reconvert_bundle_TTK7ez"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "product_information_3j36ph",
-    "product_reviews_fEiGRj"
+    "product_reviews_fEiGRj",
+    "1787465165663500ac"
   ]
 }
