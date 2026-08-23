@@ -216,17 +216,17 @@
         "disabled": false,
         "settings": {}
       },
-      "169412249732273955": {
-        "type": "shopify://apps/intercom-ai-customer-service/blocks/widget/ef6552d6-43c7-4fc7-b903-fec510e74dee",
-        "disabled": false,
-        "settings": {}
-      },
       "11735689235857492391": {
         "type": "shopify://apps/algolia-ai-search-discovery/blocks/autocomplete/57bb7f86-d5fe-4d43-96ca-3953324494cf",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "is_horizon_theme": false
         }
+      },
+      "169412249732273955": {
+        "type": "shopify://apps/intercom-ai-customer-service/blocks/widget/ef6552d6-43c7-4fc7-b903-fec510e74dee",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
