@@ -223,9 +223,9 @@
           "is_horizon_theme": false
         }
       },
-      "169412249732273955": {
-        "type": "shopify://apps/intercom-ai-customer-service/blocks/widget/ef6552d6-43c7-4fc7-b903-fec510e74dee",
-        "disabled": true,
+      "8774941748004189772": {
+        "type": "shopify://apps/upsell-com-ex-reconvert/blocks/cart-drawer/72c64c30-2f7c-4a71-ae4c-efd1d5d1d2e2",
+        "disabled": false,
         "settings": {}
       }
     },
