@@ -41,20 +41,27 @@
     },
     "1787465165663500ac": {
       "type": "apps",
+      "settings": {}
+    },
+    "9398de2f9305bafe6f9c": {
+      "type": "apps",
       "blocks": {
-        "upsell_com_ex_reconvert_bundle_TTK7ez": {
-          "type": "shopify://apps/upsell-com-ex-reconvert/blocks/bundle/72c64c30-2f7c-4a71-ae4c-efd1d5d1d2e2",
-          "settings": {}
+        "64e2b232-64ef-42c9-ae76-8d812b540b3d": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
-        "upsell_com_ex_reconvert_bundle_TTK7ez"
+        "64e2b232-64ef-42c9-ae76-8d812b540b3d"
       ],
       "settings": {}
     }
   },
   "order": [
     "main",
+    "9398de2f9305bafe6f9c",
     "product_information_3j36ph",
     "product_reviews_fEiGRj",
     "1787465165663500ac"
