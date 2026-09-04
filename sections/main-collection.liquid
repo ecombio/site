@@ -1,5 +1,18 @@
 {{ 'main-collection.css' | asset_url | stylesheet_tag }}
 {{ 'accordion.css' | asset_url | stylesheet_tag }}
+{{ 'collection-toolbar.css' | asset_url | stylesheet_tag }}
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+{{ 'sub-collection.css' | asset_url | stylesheet_tag }}
+{{ 'promo-banner.css' | asset_url | stylesheet_tag }}
+{{ 'promo-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'image-card.css' | asset_url | stylesheet_tag }}
+{{ 'article-card.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'main-collection.js' | asset_url }}" defer></script>
+<script src="{{ 'accordion.js' | asset_url }}" defer></script>
+<script src="{{ 'collection-toolbar.js' | asset_url }}" defer></script>
+<script src="{{ 'promo-carousel.js' | asset_url }}" defer></script>
+<script src="{{ 'collection-feed.js' | asset_url }}" defer></script>
 
 {%- liquid
   assign active_tab = request.query_parameters['tab'] | default: 'products'
@@ -45,9 +58,6 @@
     </div>
 
     <section class="collection-section">
-
-      {%- comment -%} Inlined from snippets/collection-toolbar.liquid {%- endcomment -%}
-      {{ 'collection-toolbar.css' | asset_url | stylesheet_tag }}
 
       <div
         class="collection-toolbar"
@@ -184,13 +194,9 @@
         </div>
       {%- endif -%}
 
-      <script src="{{ 'collection-toolbar.js' | asset_url }}" defer></script>
-      {%- comment -%} End inlined collection-toolbar {%- endcomment -%}
-
       <div class="collection-body{% unless section.settings.show_filters %} collection-body--filters-hidden{% endunless %}">
 
         {%- if section.settings.show_filters -%}
-          {%- comment -%} Inlined from snippets/collection-filter.liquid {%- endcomment -%}
           {%- liquid
             if collection
               assign filters = collection.filters
@@ -438,17 +444,9 @@
           </aside>
 
           <script src="{{ 'collection-filter.js' | asset_url }}" defer></script>
-          {%- comment -%} End inlined collection-filter {%- endcomment -%}
         {%- endif -%}
 
         <div class="collection-body__feed">
-          {%- comment -%} Inlined from snippets/collection-feed.liquid {%- endcomment -%}
-          {{ 'product-card.css' | asset_url | stylesheet_tag }}
-          {{ 'sub-collection.css' | asset_url | stylesheet_tag }}
-          {{ 'promo-banner.css' | asset_url | stylesheet_tag }}
-          {{ 'promo-carousel.css' | asset_url | stylesheet_tag }}
-          {{ 'image-card.css' | asset_url | stylesheet_tag }}
-          {{ 'article-card.css' | asset_url | stylesheet_tag }}
 
           <div class="collection-feed" id="collection-feed" data-collection-feed>
 
@@ -556,9 +554,6 @@
 
           </div>
 
-          <script src="{{ 'promo-carousel.js' | asset_url }}" defer></script>
-          <script src="{{ 'collection-feed.js' | asset_url }}" defer></script>
-          {%- comment -%} End inlined collection-feed {%- endcomment -%}
         </div>
 
       </div>
@@ -584,9 +579,6 @@
   <div class="collection-mobile-backdrop" aria-hidden="true"></div>
 
 </div>
-
-<script src="{{ 'main-collection.js' | asset_url }}" defer></script>
-<script src="{{ 'accordion.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
