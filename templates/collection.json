@@ -12,9 +12,52 @@
     "collection": {
       "type": "main-collection",
       "blocks": {
+        "promo_carousel_PhFdwm": {
+          "type": "promo_carousel",
+          "settings": {
+            "position": 1,
+            "heading": "",
+            "subheading": "",
+            "collection": "electric-scooters",
+            "products_limit": 12,
+            "cards_per_row_desktop": 3,
+            "cards_per_row_mobile": 2,
+            "show_arrows": true,
+            "arrow_visibility": "hover",
+            "show_dots": true,
+            "show_atc_button": true,
+            "show_compare_checkbox": true,
+            "show_wishlist_button": true,
+            "show_quickview_button": true,
+            "show_sale_badge": true,
+            "show_vendor_label": true,
+            "show_reviews_badge": true,
+            "show_savings_row": true,
+            "show_eta_badge": true,
+            "enable_promo_card": false,
+            "promo_link": "",
+            "promo_heading": "",
+            "promo_subheading": "",
+            "promo_price_text": "",
+            "promo_price_truncate": false,
+            "promo_button_label": "",
+            "promo_content_position": "center",
+            "promo_image_scale": 100,
+            "promo_text_color": "#ffffff",
+            "promo_heading_size": 32,
+            "promo_subheading_size": 16,
+            "promo_price_size": 14,
+            "promo_button_size": 14,
+            "promo_custom_width": false,
+            "promo_width_px": 400,
+            "promo_custom_width_mobile": false,
+            "promo_width_px_mobile": 160,
+            "promo_height_mobile": 320,
+            "promo_height_desktop": 500
+          }
+        },
         "promo_banner_w9BJ6V": {
           "type": "promo_banner",
-          "disabled": true,
           "settings": {
             "position": 7,
             "heading": "",
@@ -30,6 +73,7 @@
         }
       },
       "block_order": [
+        "promo_carousel_PhFdwm",
         "promo_banner_w9BJ6V"
       ],
       "custom_css": [],
