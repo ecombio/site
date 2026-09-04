@@ -1,6 +1,5 @@
 {{ 'main-collection.css' | asset_url | stylesheet_tag }}
 {{ 'accordion.css' | asset_url | stylesheet_tag }}
-{{ 'collection-toolbar.css' | asset_url | stylesheet_tag }}
 {{ 'product-card.css' | asset_url | stylesheet_tag }}
 {{ 'sub-collection.css' | asset_url | stylesheet_tag }}
 {{ 'promo-banner.css' | asset_url | stylesheet_tag }}
@@ -10,9 +9,7 @@
 
 <script src="{{ 'main-collection.js' | asset_url }}" defer></script>
 <script src="{{ 'accordion.js' | asset_url }}" defer></script>
-<script src="{{ 'collection-toolbar.js' | asset_url }}" defer></script>
 <script src="{{ 'promo-carousel.js' | asset_url }}" defer></script>
-<script src="{{ 'collection-feed.js' | asset_url }}" defer></script>
 
 {%- liquid
   assign active_tab = request.query_parameters['tab'] | default: 'products'
