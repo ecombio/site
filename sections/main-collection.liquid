@@ -205,7 +205,6 @@
             endif
           -%}
 
-          {{ 'collection-filter.css' | asset_url | stylesheet_tag }}
 
           <aside
             class="collection-filter"
@@ -444,7 +443,6 @@
 
         <div class="collection-body__feed">
           {%- comment -%} Inlined from snippets/collection-feed.liquid {%- endcomment -%}
-          {{ 'collection-feed.css' | asset_url | stylesheet_tag }}
           {{ 'product-card.css' | asset_url | stylesheet_tag }}
           {{ 'sub-collection.css' | asset_url | stylesheet_tag }}
           {{ 'promo-banner.css' | asset_url | stylesheet_tag }}
