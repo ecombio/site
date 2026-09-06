@@ -23,14 +23,6 @@
 
   assign is_sponsored = is_sponsored | default: false
 
-  # NOTE: the `default` filter treats `false` as blank and silently
-  # swaps it back to the fallback — so `show_atc | default: true` was
-  # overriding an explicit `false` from the section settings back to
-  # `true`. That's why unchecking the toggles in the theme editor
-  # didn't hide anything. Checking for `nil` instead only fills in the
-  # default when the param wasn't passed at all, and leaves an
-  # explicit `false` alone. Every toggle below now uses this pattern
-  # since they're all wired to real settings.
   if show_atc == nil
     assign show_atc = true
   endif
@@ -59,11 +51,6 @@
     assign show_eta = true
   endif
 
-  # Same `nil`-check pattern as above, applied to the reviews provider.
-  # `provider` isn't a boolean toggle, so there's no false-vs-blank trap
-  # here — but the section calling this card still needs to pass its own
-  # `section.settings.reviews_provider` through, or this card falls back
-  # to Yotpo regardless of what's picked elsewhere on the site.
   assign card_reviews_provider = provider | default: settings.reviews_provider | default: 'yotpo'
 
   assign card_image_sizes = '(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw'
