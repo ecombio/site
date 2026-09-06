@@ -72,15 +72,6 @@
   opacity: 0;
 }
 
-/* Only zones with a real second image get the swap — product-card.liquid
-   adds --has-hover exclusively when card_image2 exists, so single-image
-   cards never fade into empty space.
-
-   !important added deliberately: this pattern was silently broken by a
-   later, more specific or later-loaded rule targeting .product-card__img.
-   The hover swap is a core interaction, not a cosmetic nicety, so it
-   wins regardless of load order or specificity creep elsewhere in the
-   theme's CSS bundle. */
 .product-card__img-zone--has-hover:hover .product-card__img--secondary {
   opacity: 1 !important;
 }
@@ -234,16 +225,6 @@
   line-height: 1;
 }
 
-/* -webkit-line-clamp + display: -webkit-box already truncates at 2
-   lines with a trailing ellipsis — supported in every current
-   evergreen browser (Chrome/Edge/Safari always, Firefox since v68),
-   so no fallback is needed. `line-clamp` is included alongside the
-   prefixed version now that it's landed as an unprefixed standard
-   property in newer engines, in case the vendor-prefixed form is ever
-   deprecated. A `title` attribute was also added on the anchor in
-   product-card.liquid so the full, untruncated name is still
-   available as a native hover tooltip and to screen readers that
-   don't handle line-clamp truncation gracefully. */
 .product-card__title {
   font-size: 0.85rem;
   font-weight: 600;
@@ -269,13 +250,6 @@
   overflow: hidden;
 }
 
-/* Swapped from Judge.me (.jdgm-widget) to Yotpo (.yotpo-widget-instance)
-   now that product cards render the Yotpo star-rating snippet instead.
-   Same wrapping/truncation fix as before, just retargeted at Yotpo's
-   markup -- verify against the live rendered badge, since Yotpo's
-   internal DOM structure differs from Judge.me's and the `*` selector
-   may need narrowing to a more specific child element if the
-   !important overrides don't land the same way. */
 .product-card__reviews .yotpo-widget-instance,
 .product-card__reviews .yotpo-widget-instance * {
   max-width: 100%;
@@ -305,15 +279,6 @@
   line-height: 1;
 }
 
-/* Regular price — shown struck through, stacked above the sale price,
-   only while on sale. Empty `<span aria-hidden>` variant (see
-   product-card.liquid) uses visibility: hidden rather than being
-   omitted from the DOM entirely — that reserves the same line-height
-   whether or not this row is showing (sale off, or the "Show savings
-   row" section setting is off), so a mixed grid of on-sale and
-   regular-price cards keeps the sale price and everything below it
-   (badge, ETA, buttons) aligned at the same vertical position across
-   a row instead of jumping around per-card. */
 .product-card__price--compare {
   font-size: 0.78rem;
   font-weight: 500;
@@ -329,11 +294,6 @@
   color: var(--product-card-sale-badge);
 }
 
-/* Savings badge — now its own stacked line under the sale price
-   (previously sat inline next to the struck-through comp value in a
-   shared .product-card__savings-row). Same visibility: hidden
-   spacer treatment as .product-card__price--compare above, for the
-   same row-alignment reason. */
 .product-card__save-badge {
   display: inline-block;
   align-self: flex-start;
